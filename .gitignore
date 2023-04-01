@@ -1,6 +1,7 @@
 .config/zsh/.zcompdump
 .config/alacritty/alacritty.yml
 .config/alacritty/colors
+.config/alacritty/themes
 .config/btop/btop.log
 .config/kitty/theme.conf
 .config/nushell/history.txt

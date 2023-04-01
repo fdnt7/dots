@@ -1,0 +1,6 @@
+#!/bin/sh
+idf=/tmp/chord-notify-id-$1
+id=$(cat "/tmp/chord-notify-id-$1")
+notify-send "Launching $2..." -u low -r "$id" -t 2000 -i "$2"
+$2 &
+rm "$idf" -f

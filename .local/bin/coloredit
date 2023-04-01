@@ -1,0 +1,4 @@
+#!/bin/sh
+
+$EDITOR "$HOME/.local/share/colors.env" &&
+"$HOME/.local/bin/colorsubst"

@@ -1,0 +1,8 @@
+#!/bin/sh
+icon="$(amixer get Capture | sed -nre 's/.*Capture .+\[off\].*/unmute/p; s/.*Capture .+\[(.*%)\].*/mute/p')"
+
+msg="$(echo "$icon" | awk '{$1=toupper(substr($1,0,1))substr($1,2)}1')d"
+icon_path="$HOME/.local/share/assets/$icon.png"
+
+amixer set Capture toggle > /dev/null && \
+  notify-send -h string:x-canonical-private-synchronous:volume -u low -t 1000 "$msg" -i "$icon_path" \

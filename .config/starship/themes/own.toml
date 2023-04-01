@@ -1,0 +1,209 @@
+format = """
+[░▒▓](white)\
+$username\
+$hostname\
+$shell\
+[](bg:blue fg:white)\
+$directory\
+[](fg:blue bg:cyan)\
+$git_branch\
+$git_status\
+[](fg:cyan bg:green)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$python\
+[](fg:green bg:yellow)\
+$package\
+[](fg:yellow bg:red)\
+$sudo\
+[](fg:red bg:bright-black)\
+$cmd_duration\
+[](fg:bright-black bg:black)\
+$status\
+[](fg:black) \
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bold bg:white fg:black"
+style_root = "bg:white"
+format = '[$user]($style)'
+disabled = true
+
+[hostname]
+format = "[(@$hostname )]($style)"
+style = "bold bg:white fg:bright-black"
+trim_at = "-"
+ssh_only = false
+disabled = true
+
+[shell]
+fish_indicator = "⋊>"
+zsh_indicator = "%_"
+xonsh_indicator = "@>"
+bash_indicator = "_"
+nu_indicator = "/>"
+powershell_indicator = ">_"
+style = "bold fg:bright-black bg:white"
+format = '[ $indicator ]($style)'
+disabled = false
+
+[directory]
+style = "bg:blue fg:black"
+repo_root_style = "bg:blue fg:black bold"
+repo_root_format = "[$before_root_path]($style)[  ($repo_root )]($repo_root_style)[($path )]($style)[$read_only]($read_only_style)"
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = " "
+read_only_style = "bg:blue fg:red bold"
+fish_style_pwd_dir_length = 2
+truncation_length = 8
+truncation_symbol = ""
+truncate_to_repo = true
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"hdd" = " "
+
+# "~" = " "
+"Applications" = "ﰪ "
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Videos" = " "
+"Repos" = " "
+
+".dup" = " "
+".priv" = " "
+".nsfw" = " "
+".old" = " "
+
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:green"
+format = '[ [$symbol]($style fg:green dimmed) ($version(-$name)) ]($style fg:black)'
+
+[docker_context]
+symbol = " "
+style = "bg:red fg:black"
+format = '[ $symbol $context ]($style)$path'
+disabled = true
+
+[git_branch]
+symbol = ""
+style = "bg:cyan fg:black bold"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:cyan fg:cyan dimmed"
+format = '[($all_status$ahead_behind )]($style)'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+
+[elixir]
+symbol = " "
+style = "bg:green fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:green fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:green"
+format = '[ [$symbol]($style fg:cyan dimmed) ($version) ]($style fg:black)'
+
+[haskell]
+symbol = " "
+style = "bg:green fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:green bold"
+format = '[ [$symbol]($style fg:red dimmed) ($version) ]($style fg:black)'
+
+[julia]
+symbol = " "
+style = "bg:green fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:green"
+format = '[ [$symbol]($style fg:green dimmed) ($version) ]($style fg:black)'
+
+[nim]
+symbol = " "
+style = "bg:green fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "bg:green"
+format = '[ [$symbol]($style fg:red dimmed) ($version) ]($style fg:black)'
+
+[python]
+symbol = " "
+style = "bg:green"
+format = '[ [$symbol]($style fg:yellow dimmed) ($version) (行 $virtualenv )]($style fg:black)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:bright-black"
+format = '[ ♥ $time ]($style)'
+
+[cmd_duration]
+min_time = 250
+style = "bg:bright-black fg:bright-white bold"
+format = "[ ⧗ $duration ]($style)"
+disabled = false
+
+[package]
+symbol = " "
+style = "bg:yellow fg:black"
+format = "[ $symbol ($version) ]($style)"
+
+
+[sudo]
+style = "bold dimmed fg:black bg:red"
+symbol = " "
+format = "[ $symbol ]($style)"
+disabled = false
+
+[status]
+style = "fg:bright-black bg:black"
+symbol = ""
+success_symbol = ""
+not_executable_symbol = " "
+not_found_symbol = ""
+sigint_symbol = "ﮊ"
+signal_symbol = ""
+format = '[ $symbol$maybe_int ]($style)'
+map_symbol = true
+disabled = false
+

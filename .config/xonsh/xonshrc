@@ -1,0 +1,81 @@
+
+## Aliases
+
+aliases['l'] = "exa -ah --icons --color=always --group-directories-first"
+aliases['ls'] = "exa -lah --icons --color=always --git --group-directories-first --color-scale"
+aliases['lss'] = "exa -lahUumF@ --icons --color=always --git --group-directories-first --color-scale"
+aliases['lsss'] = "exa -lahUumF@HSi --icons --color=always --git --group-directories-first --color-scale"
+aliases['lr'] = "exa -Rlah --icons --color=always --git --group-directories-first --color-scale"
+aliases['lg'] = "exa -a --icons --color=always --git --group-directories-first --color-scale"
+aliases['lt'] = "exa -Tlah -L 3 --icons --color=always --git --group-directories-first --color-scale"
+aliases['l.'] = "exa -ah --icons --color=always --group-directories-first | rg '^*\.'"
+
+aliases['diff'] = "colordiff"
+aliases['egrep'] = "egrep --color=auto"
+aliases['fgrep'] = "fgrep --color=auto"
+aliases['grep'] = "grep --color=auto"
+aliases['black'] = "black -S"
+
+aliases['ct'] = "column -t"
+aliases['df'] = "df -hPT"
+aliases['mount'] = "mount | column -t"
+aliases['wget'] = "wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+aliases['xonsh'] = "xonsh --rc $XDG_CONFIG_HOME/xonsh/xonshrc"
+
+aliases['d'] = 'date +%F'
+aliases['now'] = 'date +"%T"'
+aliases['nowtime'] = 'now'
+aliases['nowdate'] = 'date +"%m-%d-%Y"'
+aliases['ssh'] = "TERM=xterm-256color $(which ssh)"
+aliases['tree'] = 'tree -a -I .git'
+
+aliases['cp'] = 'cp -i'
+aliases['ln'] = 'ln -i'
+aliases['mv'] = 'mv -i'
+aliases['rm'] = 'rm -i'
+aliases['mkdir'] = 'mkdir -pv'
+
+aliases['v'] = "nvim"
+aliases['vv'] = "sudoedit"
+aliases['yay'] = "paru"
+aliases['yeet'] = "paru -R"
+aliases['yeeet'] = "paru -Rcns"
+aliases['V'] = "neovide --multigrid"
+aliases['ff'] = "fastfetch --load-config examples/2"
+aliases['nf'] = "neofetch"
+aliases['y'] = "paru"
+aliases['s'] = "sudo"
+aliases['code'] = "code-insiders"
+
+aliases['...'] = "cd ../.."
+aliases['....'] = "cd ../../.."
+aliases['.....'] = "cd ../../../.."
+aliases['......'] = "cd ../../../../.."
+aliases['.......'] = "cd ../../../../../.."
+aliases['........'] = "cd ../../../../../../.."
+
+aliases['aup'] = "pamac upgrade --aur"
+aliases['grubup'] = "sudo update-grub"
+aliases['fixpacman'] = "sudo rm /var/lib/pacman/db.lck"
+aliases['tarnow'] = 'tar -acf '
+aliases['untar'] = 'tar -zxvf '
+aliases['wget'] = 'wget -c '
+aliases['psmem'] = 'ps auxf | sort -nr -k 4'
+aliases['psmem10'] = 'ps auxf | sort -nr -k 4 | head -10'
+aliases['upd'] = 'sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist && sudo pacman -Syu && fish_update_completions'
+
+aliases['dir'] = 'dir --color=auto'
+aliases['vdir'] = 'vdir --color=auto'
+aliases['grep'] = 'grep --color=auto'
+aliases['fgrep'] = 'fgrep --color=auto'
+aliases['egrep'] = 'egrep --color=auto'
+aliases['hw'] = 'hwinfo --short'                                   # Hardware Info
+aliases['big'] = "expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB (expac must be installed)
+
+aliases['mirror'] = "sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" 
+aliases['mirrord'] = "sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" 
+aliases['mirrors'] = "sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" 
+aliases['mirrora'] = "sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" 
+
+
+execx($(starship init xonsh))

@@ -1,0 +1,4 @@
+#!/bin/sh
+touch .xonshrc &&
+/bin/xonsh --rc "$XDG_CONFIG_HOME/xonsh/xonshrc" &&
+rm -f .xonshrc

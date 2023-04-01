@@ -1,0 +1,13 @@
+#!/bin/sh
+
+bgdir="$HOME/Pictures/Backgrounds/Pixel-arts/"
+bgi=$(find "$bgdir" -type f | shuf -n 1)
+
+swww img \
+  "$bgi" \
+  `` \
+  -t grow \
+  --transition-pos top-right \
+  --transition-step 255 \
+  --transition-duration 1 \
+  --transition-fps 60 \

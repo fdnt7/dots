@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+bgdir="$HOME/Pictures/Backgrounds"
+#bgdir="/media/hdd/Pictures/Backgrounds/Non-seasonal/Space/A"
+bgi=$(find "$bgdir" -type f | shuf -n 1)
+
+_cols=$(dominant_colours --no-palette --max-colours 5 "$bgi")
+readarray -t cols <<<"$_cols"
+
+swaylock \
+  -f \
+  -i "$bgi" \
+  ``\
+  --inside-color "${cols[0]}22" \
+  --key-hl-color "${cols[1]}" \
+  --layout-bg-color "${cols[4]}11" \
+  --layout-text-color "${cols[4]}33" \
+  --ring-color "${cols[2]}66" \
+  --separator-color "${cols[1]}88" \
+  --text-color "${cols[3]}" \

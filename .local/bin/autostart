@@ -1,0 +1,50 @@
+#!/bin/sh
+
+###  ______                    _   _             Autostart Script
+### (_) |        o     |      | | | |            2023
+###    _|_  ,_       __|   _  | | | |  __,
+###   / | |/  |  |  /  |  |/  |/  |/  /  |
+###  (_/      |_/|_/\_/|_/|__/|__/|__/\_/|_/
+
+
+## Configs
+BACKGROUND_DIR=$HOME/Pictures/Backgrounds
+BACKGROUND=$BACKGROUND_DIR/Pixel-arts/94b21a17d8a954aee4e7228457d52729.gif
+#BACKGROUND_DIR_RAND=$BACKGROUND_DIR
+#BACKGROUND=$(find $BACKGROUND_DIR_RAND -type f | shuf -n 1)
+
+## Screen Locking Daemon
+lockd &
+
+# Policy Kit Daemon
+/usr/lib/polkit-kde-authentication-agent-1 &
+#lxsession &
+
+# Nofication Daemon
+dbus-daemon --session --address=unix:path="$XDG_RUNTIME_DIR/bus" &
+swaync &
+#dunst &
+
+# Gnome Keyring Daemon for Mailspring
+dbus-update-activation-environment --all & gnome-keyring-daemon --start --components=secrets &
+
+# KDE Connect Daemon
+/usr/lib/kdeconnectd &
+
+# Pipewire Daemon
+pipewire &
+jamesdsp -t &
+
+# mpDris2 & PlayerCTL Daemon
+mpDris2 & playerctld daemon &
+
+# Set Bar
+waybar &
+
+# Autostart Applications
+#mailspring &
+#/opt/bitwarden/bitwarden &
+vktablet &
+
+# Set Background
+swww init && swww img "$BACKGROUND" -t grow --transition-step 255 --transition-duration 1.333 --transition-fps 60 &

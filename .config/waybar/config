@@ -1,0 +1,440 @@
+{
+	// Global configuration
+	"layer": "top",
+
+	"position": "top",
+
+	"height": 20,
+
+	"spacing": 0,
+
+	"modules-left": [
+		"custom/power",
+		"custom/arrow16",
+		//		"custom/fade2",
+		"wlr/workspaces",
+		"custom/arrow13",
+		"tray",
+		"custom/arrow10",
+		//"custom/pyctl#shuffle",
+		//"custom/pyctl#voldown",
+		"custom/pyctl#previous",
+		"custom/pyctl#playpause",
+		"custom/pyctl#next",
+		//"custom/pyctl#volup",
+		//"custom/pyctl#repeat",
+		"custom/arrow14",
+		"custom/pyctltitle",
+		"custom/arrow11"
+		//		"hyprland/window"
+	],
+
+	"modules-center": [
+		"hyprland/window"
+	],
+
+	"modules-right": [
+		"custom/arrow1",
+		"custom/alsa#1",
+		"custom/alsa#2",
+		//"pulseaudio",
+		//"sndio",
+		"custom/arrow2",
+		"network",
+		"custom/arrow3",
+		"memory",
+		"custom/arrow4",
+		"cpu",
+		"custom/arrow5",
+		"temperature",
+		"custom/arrow12",
+		"custom/weather",
+		"custom/arrow6",
+		"hyprland/language",
+		"custom/arrow7",
+		"keyboard-state",
+		"custom/arrow8",
+		"clock#date",
+		"custom/arrow9",
+		"clock#time",
+		"custom/arrow15",
+		"custom/notification"
+		//		"custom/fade1"
+	],
+
+	// Modules
+	//	"battery": {
+	//		"interval": 10,
+	//		"states": {
+	//			"warning": 30,
+	//			"critical": 15
+	//		},
+	//		"format-time": "{H}:{M:02}",
+	//		"format": "{icon} {capacity}% ({time})",
+	//		"format-charging": " {capacity}% ({time})",
+	//		"format-charging-full": " {capacity}%",
+	//		"format-full": "{icon} {capacity}%",
+	//		"format-alt": "{icon} {power}W",
+	//		"format-icons": [
+	//			"",
+	//			"",
+	//			"",
+	//			"",
+	//			""
+	//		],
+	//		"tooltip": false
+	//	},
+
+	"custom/power": {
+		"format": " ",
+		"on-click": "wlogout",
+		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"format": "{}"
+	},
+
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		//"scrolllock": true,
+		"format": {
+			"numlock": "{icon}",
+			"capslock": "{icon} "
+			//"scrolllock": "ﲐ{icon} "
+		},
+		"format-icons": {
+			"locked": " ",
+			"unlocked": ""
+		}
+	},
+
+	"clock#time": {
+		"interval": 60,
+		"format": "♥ {:%H:%M}",
+		"tooltip": true
+	},
+
+	"clock#date": {
+		"interval": 60,
+		"format": " {:%a, %b %e}",
+		"tooltip": true,
+		"tooltip-format": "{:%e %B %Y}"
+	},
+
+	"cpu": {
+		"interval": 2,
+		"tooltip": false,
+		"format": " {usage}%",
+		"format-alt": " {avg_frequency}GHz",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+	"hyprland/language": {
+		"format": " {}",
+		"format-en": "US",
+		"format-th": "TH",
+		"on-click": "hyprctl switchxkblayout semico-usb-keyboard next"
+	},
+
+	"memory": {
+		"interval": 8,
+		"format": "﬙ {percentage}%",
+		"format-alt": "﬙ {used:0.1f}G/{total:0.1f}G",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 2,
+		//"format-wifi": " {essid} ({signalStrength}%)",
+		"format-ethernet": " {bandwidthDownBytes} ↓↑ {bandwidthUpBytes}",
+		"format-disconnected": " ",
+		"format-alt": " {ipaddr}/{cidr}",
+		"tooltip": false
+	},
+	//	"sway/mode": {
+	//		"format": "{}",
+	//		"tooltip": false
+	//	},
+
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"wlr/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"enable-bar-scroll": true,
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"format": "{icon}",
+		"sort-by-number": true,
+		"format-icons": {
+			"1": " ",
+			"2": " ",
+			"3": " ",
+			"4": " ",
+			"5": " ",
+			"6": " ",
+			"7": " ",
+			"8": " ",
+			"9": " ",
+			"10": " "
+		}
+	},
+
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"custom/alsa#1": {
+		"exec": "amixer get Master | sed -nre 's/.*\\[off\\].*/ /p; s/.*\\[(.*%)\\].*/ \\1/p'",
+		"on-click": "amixer set Master toggle",
+		"on-scroll-up": "amixer set Master 1%+",
+		"on-scroll-down": "amixer set Master 1%-",
+		"signal": 11,
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/alsa#2": {
+		"exec": "amixer get Capture | sed -nre 's/.*Capture .+\\[off\\].*//p; s/.*Capture .+\\[(.*%)\\].*/ \\1/p'",
+		"on-click": "amixer set Capture toggle",
+		"on-scroll-up": "amixer set Capture 1%+",
+		"on-scroll-down": "amixer set Capture 1%-",
+		"signal": 11,
+		"interval": 1,
+		"tooltip": false
+	},
+
+	//	"sndio": {
+	//		"format": " {}%"
+	//	},
+	"custom/pyctltitle": {
+		"exec": "playerctl metadata --format ' {{ title }} • {{ artist }}' | sed 's/&/🙲/p'",
+		"interval": 1,
+		"max-length": 48,
+		"tooltip": false
+	},
+
+	"custom/pyctl#shuffle": {
+		"exec": "playerctl shuffle | sed -nre 's/^On$/列/p; s/^Off$/劣/p'",
+		"on-click": "playerctl shuffle toggle",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#repeat": {
+		"exec": "playerctl loop | sed -nre 's/^Track$/綾/p; s/^Playlist$/凌/p; s/^None$/稜/p'",
+		"on-click": "playerctl loop $(playerctl loop | sed -nre 's/^Playlist$/Track/p; s/^Track$/None/p; s/^None$/Playlist/p')",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#playpause": {
+		"exec": "playerctl status | sed -nre 's/^Playing$//p; s/^Paused$/契/p'",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "vol-ops +",
+		"on-scroll-down": "vol-ops -",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#volup": {
+		"format": "ﱛ",
+		"on-click": "vol-ops +",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#voldown": {
+		"format": "ﱜ",
+		"on-click": "vol-ops -",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#previous": {
+		"format": "玲",
+		"on-click": "playerctl previous",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/pyctl#next": {
+		"format": "怜",
+		"on-click": "playerctl next",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"custom/weather": {
+		"exec": "curl wttr.in/?format='%c%t' | sed -nre 's/C//p'",
+		"interval": 3600,
+		"tooltip": false
+	},
+
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{} {icon} ",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+
+	"custom/wallchange": {
+		"format": " ",
+		"on-click": "swww-rand",
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 15,
+		"spacing": 1
+	},
+
+	"custom/arrow1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow3": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow4": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow5": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow8": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow9": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow11": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow12": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow13": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow14": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow15": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow16": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/fade2": {
+		"format": "░▒▓",
+		"tooltip": false
+	},
+
+	"custom/fade1": {
+		"format": "▓▒░",
+		"tooltip": false
+	}
+}
+// vim:ft=jsonc

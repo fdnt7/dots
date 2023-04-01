@@ -1,0 +1,14 @@
+#!/bin/sh
+
+colors="$HOME/.local/share/colors.env"
+
+if ! [ -f "$colors" ]; then
+  exit 1
+fi
+
+# shellcheck source=/dev/null
+. "$HOME/.local/share/colors.env"
+
+envsubst < "$HOME/.config/alacritty/..alacritty.yml" > "$HOME/.config/alacritty/alacritty.yml"
+envsubst < "$HOME/.config/kitty/..theme.conf" > "$HOME/.config/kitty/theme.conf"
+envsubst < "$HOME/.config/waybar/..style.css" > "$HOME/.config/waybar/style.css" && restart-waybar

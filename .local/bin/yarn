@@ -1,0 +1,2 @@
+#!/bin/sh
+/bin/yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config" "$@"

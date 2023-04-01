@@ -1,0 +1,32 @@
+clock
+timestr=%H:%M
+datestr=%a, %b %-d
+fade-in=1
+show-keyboard-layout
+indicator-caps-lock
+font=UbuntuMono Nerd Font
+indicator
+indicator-radius=128
+indicator-thickness=8
+effect-blur=11x8
+effect-vignette=0.25:0.25
+bs-hl-color=#D37200
+caps-lock-bs-hl-color=#B20068
+caps-lock-key-hl-color=#FBC1FF
+inside-clear-color=#AAFBFF88
+inside-caps-lock-color=#8E0892
+inside-ver-color=#DCFF7B44
+inside-wrong-color=#FF351ECC
+#line-clear-color=#000000
+#line-caps-lock-color=#000000
+#line-ver-color=#000000
+#line-wrong-color=#000000
+line-uses-ring
+ring-clear-color=#FFFFFF
+ring-caps-lock-color=#5F0032
+ring-ver-color=#CBFF37
+ring-wrong-color=#5F0600
+text-clear-color=#B7FFF0
+text-caps-lock-color=#F668FF
+text-ver-color=#F0FFA1
+text-wrong-color=#7C0F00

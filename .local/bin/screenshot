@@ -1,0 +1,27 @@
+#!/bin/sh
+
+ss_dir="$HOME/Pictures/Screenshots"
+fn="$(date +%Y-%m-%d_%H.%M.%S.%3N).png"
+
+ss_path="$ss_dir/$fn"
+
+case $1 in
+  "full") cmd=$(grim "$ss_path" && wl-copy < "$ss_path")
+    ;;
+  "window") cmd=$(grim -g "$(hyprctl activewindow | sed -nre 's/.*at: (.*)/\1/p; s/.*size: ([0-9]+),([0-9]+)/ \1x\2/p' | tr -d '\n')" "$ss_path"  && wl-copy < "$ss_path")
+    ;;
+  "area") cmd=$(grim -g "$(slurp)" "$ss_path" && wl-copy < "$ss_path")
+    ;;
+esac
+
+if [ "$cmd" -ne 0 ]; then
+  exit "$cmd"
+fi
+
+if [ ! -f "$ss_path" ]; then
+  exit 1
+fi
+
+mpv --no-video /usr/share/sounds/freedesktop/stereo/screen-capture.oga
+notify-send -i "$ss_path" -u low "Screenshot Saved at $ss_path"
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+step=.05
+
+initvol=$(playerctl volume)
+
+if ! [ "$1" = '+' ] && ! [ "$1" = '-' ]; then
+  exit 1
+fi
+
+playerctl volume "$step$1"
+while [ "$initvol" = "$(playerctl volume)" ]; do
+  :
+done
+
+newvol=$(playerctl volume)
+echo "$newvol"
+percent_float=$(echo "$newvol * 100" | bc)
+percent=${percent_float%.*}
+
+notify-send -h string:x-canonical-private-synchronous:volume -u low -t 667 -h int:value:"$percent" "$percent%"

@@ -1,0 +1,2 @@
+#!/bin/sh
+bash -c '/home/fdnt/.local/lib/photoshop-22-linux/scripts/launcher.sh'

@@ -1,0 +1,36 @@
+max-history=256
+sort=-priority
+max-visible=8
+
+font=UbuntuMono Nerd Font 10
+background-color=#4B5485CC
+border-size=3
+border-radius=0
+border-color=#4B548544
+progress-color=over #6A78C1CC
+max-icon-size=64
+default-timeout=10000
+
+[mode=do-not-disturb]
+invisible=1
+
+[urgency=low]
+font=UbuntuMono Nerd Font 9
+text-color=#D7EEFF
+background-color=#3E647988
+border-size=2
+border-radius=8
+border-color=#3E647933
+progress-color=over #9BAFBF44
+max-icon-size=48
+default-timeout=5000
+
+[urgency=high]
+font=UbuntuMono Nerd Font 12
+background-color=#EA002D
+border-size=4
+border-radius=14
+border-color=#FFE0E9
+progress-color=over #FF728D
+max-icon-size=72
+default-timeout=0

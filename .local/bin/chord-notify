@@ -1,0 +1,3 @@
+#!/bin/sh
+notify-send "($1) was pressed" "Waiting for second key of chord..." -u low -t 0 -i "$2" -p > "/tmp/chord-notify-id-$1"
+

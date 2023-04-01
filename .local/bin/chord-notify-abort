@@ -1,0 +1,5 @@
+#!/bin/sh
+idf=/tmp/chord-notify-id-$1
+id=$(cat "/tmp/chord-notify-id-$1")
+notify-send "Aborting key chord ($1)" -u low -r "$id" -t 1000
+rm "$idf" -f

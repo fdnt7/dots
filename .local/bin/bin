@@ -1,0 +1,4 @@
+#!/bin/sh
+
+$EDITOR "$1" &&
+chmod +x "$1"

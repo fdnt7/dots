@@ -78,16 +78,17 @@ truncate_to_repo = true
 "hdd" = " "
 
 # "~" = " "
-"Applications" = "ﰪ "
+"Applications" = "󱍕 "
 "Documents" = " "
 "Downloads" = " "
-"Music" = " "
+"Music" = "󰼄 "
 "Pictures" = " "
 "Videos" = " "
-"Repos" = " "
+"Repos" = "󰐶 "
 
 ".dup" = " "
-".priv" = " "
+".priv" = " "
+".hid" = " "
 ".nsfw" = " "
 ".old" = " "
 
@@ -199,9 +200,9 @@ disabled = false
 style = "fg:bright-black bg:black"
 symbol = ""
 success_symbol = ""
-not_executable_symbol = " "
+not_executable_symbol = ""
 not_found_symbol = ""
-sigint_symbol = "ﮊ"
+sigint_symbol = ""
 signal_symbol = ""
 format = '[ $symbol$maybe_int ]($style)'
 map_symbol = true

@@ -26,14 +26,14 @@ tw             # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
 st      𢡊      # STICKY
 di             # DIR
-pi      ﳣ       # FIFO
+pi      󰟥       # FIFO
 so             # SOCK
 bd             # BLK
 cd      c       # CHR
 su      u       # SETUID
 sg      g       # SETGID
 ex             # EXEC
-fi             # FILE
+fi      󰈔       # FILE
 
 # file extensions (vim-devicons)
 *.styl          
@@ -283,81 +283,152 @@ Vagrantfile             
 *.swm   
 *.dwm   
 *.esd   
+*.esd   
+*.a     
+*.ar    
+*.dmg   
+*.iso   
+*.par   
+*.tc    
 
 # image formats (extensions from dircolors defaults)
-*.jpg   
-*.jpeg  
-*.mjpg  
-*.mjpeg 
-*.gif   
-*.bmp   
-*.pbm   
-*.pgm   
-*.ppm   
-*.tga   
-*.xbm   
-*.xpm   
-*.tif   
-*.tiff  
-*.png   
-*.svg   
-*.svgz  
-*.mng   
-*.pcx   
-*.mov   
-*.mpg   
-*.mpeg  
-*.m2v   
-*.mkv   
-*.webm  
-*.ogm   
-*.mp4   
-*.m4v   
-*.mp4v  
-*.vob   
-*.qt    
-*.nuv   
-*.wmv   
-*.asf   
-*.rm    
-*.rmvb  
-*.flc   
-*.avi   
-*.fli   
-*.flv   
-*.gl    
-*.dl    
-*.xcf   
-*.xwd   
-*.yuv   
-*.cgm   
-*.emf   
-*.ogv   
-*.ogx   
+*.jpg   󰔉
+*.jpeg  󰔉
+*.mjpg  󰔉
+*.mjpeg 󰔉
+*.gif   󰔉
+*.bmp   󰔉
+*.pbm   󰔉
+*.pgm   󰔉
+*.ppm   󰔉
+*.tga   󰔉
+*.xbm   󰔉
+*.xpm   󰔉
+*.tif   󰔉
+*.tiff  󰔉
+*.png   󰔉
+*.svg   󰔉
+*.svgz  󰔉
+*.mng   󰔉
+*.pcx   󰔉
+*.xcf   󰃣
+*.jfif  󰔉
+*.arw   󰔉
+*.cbr   󰔉
+*.cbz   󰔉
+*.cr2   󰔉
+*.dvi   󰔉
+*.eps   󰔉
+*.heif  󰔉
+*.ico   󰔉
+*.nef   󰔉
+*.orf   󰔉
+*.pnm   󰔉
+*.ps    󰔉
+*.raw   󰔉
+*.stl   󰔉
+*.webp  󰔉
+
+*.mov   󰕧
+*.mpg   󰕧
+*.mpeg  󰕧
+*.m2v   󰕧
+*.mkv   󰕧
+*.webm  󰕧
+*.ogm   󰕧
+*.mp4   󰕧
+*.m4v   󰕧
+*.mp4v  󰕧
+*.vob   󰕧
+*.qt    󰕧
+*.nuv   󰕧
+*.wmv   󰕧
+*.asf   󰕧
+*.rm    󰕧
+*.rmvb  󰕧
+*.flc   󰕧
+*.avi   󰕧
+*.fli   󰕧
+*.flv   󰕧
+*.gl    󰕧
+*.dl    󰕧
+*.xwd   󰕧
+*.yuv   󰕧
+*.cgm   󰕧
+*.emf   󰕧
+*.ogv   󰕧
+*.ogx   󰕧
+*.heic  󰕧  
+*.m2ts  󰕧  
+*.xpm   󰕧  
 
 # audio formats (extensions from dircolors defaults)
-*.aac   
-*.au    
-*.flac  
-*.m4a   
-*.mid   
-*.midi  
-*.mka   
-*.mp3   
-*.mpc   
-*.ogg   
-*.ra    
-*.wav   
-*.oga   
-*.opus  
-*.spx   
-*.xspf  
+*.aac   󰝚
+*.au    󰝚
+*.flac  󰝚
+*.m4a   󰝚
+*.mid   󰝚
+*.midi  󰝚
+*.mka   󰝚
+*.mp3   󰝚
+*.mpc   󰝚
+*.ogg   󰝚
+*.ra    󰝚
+*.wav   󰝚
+*.oga   󰝚
+*.opus  󰝚
+*.spx   󰝚
+*.xspf  󰝚
+*.alac  󰝚
+*.ape   󰝚
+*.wma   󰝚
+
+# cryptography formats
+*.asc         
+*.enc         
+*.gpg         󰌆
+*.p12         󰌆
+*.pfx         
+*.pgp         󰌆
+*.sig         󰷻
+*.signature   󰷻
+
+# document formats
+*.djvu  
+*.doc   󰈬
+*.docx  󰈬
+#*.dvi   
+*.eml   󰇮
+*.eps   󰕙
+#*.fotd  
+*.key   󰐨
+*.odp   󰐨
+*.odt   󰈙
+*.pdf   
+*.ppt   󰈧
+*.pptx  󰈧
+*.rtf   󰈙
+*.xls   󰈛
+*.xlsx  󰈛
+
+# temp formats
+*.bak   󰁯
+*.bk    󰁯
+*.swn   󰁯
+*.swo   󰁯
+*.swp   󰁯
+*.tmp   󰁯
+*.~     󰁯
 
 # other formats
-*.pdf   
+*.txt         󰎞
+*.log         󰯂
+*.directory   󱧼
+*.exe         
+*.msi         
+*.dll         
 
-
-## special directory names
+## custom directory names
 /bin            
 /sbin           
 /usr/bin        
@@ -365,7 +436,7 @@ Vagrantfile             
 /usr/local/bin  
 ~/.local/bin    
 
-/boot   ⏻
+/boot   
 /dev    
 /etc    
 /home   
@@ -385,9 +456,9 @@ Vagrantfile             
 /usr/local/lib  
 ~/.local/lib    
 
-/usr/include        
-/usr/local/include  
-~/.local/include    
+/usr/include        󱀯
+/usr/local/include  󱀯
+~/.local/include    󱀯
 
 /usr/share/icons        
 /usr/local/share/icons  
@@ -395,76 +466,79 @@ Vagrantfile             
 
 ~/.local/state  
 
-/usr/share/applications         
-/usr/local/share/applications   
-~/.local/share/applications     
+/usr/share/applications         
+/usr/local/share/applications   
+~/.local/share/applications     
 
 /mnt    
-/opt    
-/proc   
-/root   
-/run    ﰌ
+/opt    󰶮
+/proc   
+/root   
+/run    󰑮
 /srv    
 /sys    
 
-/tmp                
-~/Downloads/.tmp    
+/tmp                󰅒
+~/Downloads/.tmp    󰅒
 
-/usr    
+/usr    󰭕
 
 /var    
 ~/.var  
 
 /mnt/hdd      
-/mnt/win     
 
 ~   
 
-~/Applications          ﰪ
-~/Documents             
-/mnt/hdd/Documents      
+~/Applications          󱍕
+~/Documents             󱔘
+/mnt/hdd/Documents      󱔘
 ~/Downloads             
 /mnt/hdd/Downloads      
-~/Music                 
-/mnt/hdd/Music          
+~/Music                 󰼄
+/mnt/hdd/Music          󰼄
 ~/Pictures              
 /mnt/hdd/Pictures       
 ~/Videos                
 /mnt/hdd/Videos         
-~/Repos                 
+~/Repos                 󰐶
 
-~/.vscode               ﬏
+~/.vscode               󰨞
 ~/.zoom                 
 ~/.steam                
 ~/.ssh                  
 ~/.pki                  
-~/.muse-hub             ﭻ
+~/.muse-hub             󰙽
 ~/.mozilla              
-~/.fltk                 
+~/.fltk                 󰦭
 ~/.dbus                 
 ~/.stellarium           
-~/.nuget                
-~/.dotnet               
-~/.hyprland             
+~/.nuget                󰌛
+~/.dotnet               󰪮
+~/.hyprland             󰸊
 ~/.java                 
-~/.thextech-smbx        ﳝ
+~/.thextech-smbx        󰟠
 
 ~/.config               
-~/.cache                
+~/.cache                󰃨
 
-~/Documents/.priv   
-~/Downloads/.priv   
-~/Pictures/.priv    
-~/Videos/.priv      
+~/Documents/.priv   
+~/Downloads/.priv   
+~/Pictures/.priv    
+~/Videos/.priv      
+
+~/Pictures/.hid     
 
 ~/Pictures/.nsfw  
 ~/Videos/.nsfw    
 
 ~/Pictures/.old   
 
-~/Pictures/Backgrounds    
-/usr/share/backgrounds    
+~/Pictures/Backgrounds    󰸉
+/usr/share/backgrounds    󰸉
 
-~/Pictures/Screenshots    
+~/Pictures/Screenshots    󰹑
 
-~/Downloads/Torrents      
+~/Downloads/Torrents        
+~/Downloads/.tmp/Torrents   
+

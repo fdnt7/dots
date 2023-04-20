@@ -11,10 +11,10 @@ SETUVAR --export HISTFILE:/home/fdnt/\x2elocal/state/bash/history
 SETUVAR --export NODE_REPL_HISTORY:/home/fdnt/\x2elocal/share/node_repl_history
 SETUVAR --export NPM_CONFIG_USERCONFIG:/home/fdnt/\x2econfig/npm/npmrc
 SETUVAR --export NUGET_PACKAGES:/home/fdnt/\x2ecache/NuGetPackages
+SETUVAR --export PSQL_HISTORY:/home/fdnt/\x2elocal/share/psql_history
 SETUVAR --export PYTHONSTARTUP:/home/fdnt/\x2econfig/python/pythonrc
 SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export QT_STYLE_OVERRIDE:kvantum
-# SETUVAR --export RUSTC_WRAPPER:/home/fdnt/\x2elocal/share/cargo/bin/sccache
 SETUVAR --export RUSTUP_HOME:/home/fdnt/\x2elocal/share/rustup
 SETUVAR --export WAKATIME_HOME:/home/fdnt/\x2econfig/wakatime
 SETUVAR --export WINEPREFIX:/home/fdnt/\x2elocal/share/wine

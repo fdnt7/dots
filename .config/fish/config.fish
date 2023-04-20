@@ -35,6 +35,7 @@ alias grep="rg --color=auto"
 alias black="black -S"
 alias du='dust'
 alias cat='bat'
+alias grep='rg'
 alias visudo="sudoedit /etc/sudoers"
 
 ## XDG Compliance
@@ -47,9 +48,11 @@ alias visudo="sudoedit /etc/sudoers"
 
 ## Shorthands
 abbr -a s 'sudo'
+abbr -a f 'hyfetch -b fastfetch'
 abbr -a pf 'pfetch'
 abbr -a nf 'neofetch'
-abbr -a ff 'fastfetch --load-config examples/2'
+abbr -a ff 'fastfetch'
+abbr -a hf 'hyfetch'
 abbr -a py 'python'
 abbr -a ipy 'ipython'
 abbr -a rs 'evcxr'
@@ -73,14 +76,15 @@ abbr -a psmem 'ps auxf | sort -nr -k 4'
 abbr -a psmem10 'ps auxf | sort -nr -k 4 | head -10'
 abbr -a hw 'hwinfo --short'
 abbr -a big "expac -H M '%m\t%n' | sort -h | nl"
+abbr -a acqr "asciiquarium -t"
 
 ## Directories
 abbr -a .c --position anywhere --set-cursor "$XDG_CONFIG_HOME/%"
 abbr -a .d --position anywhere --set-cursor "$XDG_DATA_HOME/%"
 abbr -a .l --position anywhere --set-cursor "$HOME/.local/lib/%"
 abbr -a .b --position anywhere --set-cursor "$HOME/.local/bin/%"
-abbr -a .m --position anywhere --set-cursor "/mnt/hdd/%"
-abbr -a .mp --position anywhere --set-cursor "/mnt/hdd/Pictures/%"
+abbr -a .h --position anywhere --set-cursor "/mnt/hdd/%"
+abbr -a .hp --position anywhere --set-cursor "/mnt/hdd/Pictures/%"
 
 ## Package Management
 abbr -a i "paru -S"
@@ -129,7 +133,7 @@ export EDITOR="nvim"
 ## -- Sources
 
 source /usr/share/doc/find-the-command/ftc.fish
-
+zoxide init fish | source
 
 ## -- Functions
 

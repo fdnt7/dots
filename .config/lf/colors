@@ -42,133 +42,211 @@
 
 # file types (with matching order)
 ln      01;36   # LINK
-or      31;01   # ORPHAN
-tw      34      # STICKY_OTHER_WRITABLE
-ow      34      # OTHER_WRITABLE
-st      01;34   # STICKY
+or      01;31   # ORPHAN
+tw      03;94   # STICKY_OTHER_WRITABLE
+ow      03;34   # OTHER_WRITABLE
+st      01;94   # STICKY
 di      01;34   # DIR
-pi      33      # FIFO
+pi      03;33   # FIFO
 so      01;35   # SOCK
-bd      33;01   # BLK
-cd      33;01   # CHR
+bd      01;33   # BLK
+cd      01;33   # CHR
 su      01;32   # SETUID
 sg      01;32   # SETGID
 ex      01;32   # EXEC
 fi      00      # FILE
 
 # archives or compressed (dircolors defaults)
-*.tar   01;31
-*.tgz   01;31
-*.arc   01;31
-*.arj   01;31
-*.taz   01;31
-*.lha   01;31
-*.lz4   01;31
-*.lzh   01;31
-*.lzma  01;31
-*.tlz   01;31
-*.txz   01;31
-*.tzo   01;31
-*.t7z   01;31
-*.zip   01;31
-*.z     01;31
-*.dz    01;31
-*.gz    01;31
-*.lrz   01;31
-*.lz    01;31
-*.lzo   01;31
-*.xz    01;31
-*.zst   01;31
-*.tzst  01;31
-*.bz2   01;31
-*.bz    01;31
-*.tbz   01;31
-*.tbz2  01;31
-*.tz    01;31
-*.deb   01;31
-*.rpm   01;31
-*.jar   01;31
-*.war   01;31
-*.ear   01;31
-*.sar   01;31
-*.rar   01;31
-*.alz   01;31
-*.ace   01;31
-*.zoo   01;31
-*.cpio  01;31
-*.7z    01;31
-*.rz    01;31
-*.cab   01;31
-*.wim   01;31
-*.swm   01;31
-*.dwm   01;31
-*.esd   01;31
+*.tar   31
+*.tgz   31
+*.arc   31
+*.arj   31
+*.taz   31
+*.lha   31
+*.lz4   31
+*.lzh   31
+*.lzma  31
+*.tlz   31
+*.txz   31
+*.tzo   31
+*.t7z   31
+*.zip   31
+*.z     31
+*.dz    31
+*.gz    31
+*.lrz   31
+*.lz    31
+*.lzo   31
+*.xz    31
+*.zst   31
+*.tzst  31
+*.bz2   31
+*.bz    31
+*.tbz   31
+*.tbz2  31
+*.tz    31
+*.deb   31
+*.rpm   31
+*.jar   31
+*.war   31
+*.ear   31
+*.sar   31
+*.rar   31
+*.alz   31
+*.ace   31
+*.zoo   31
+*.cpio  31
+*.7z    31
+*.rz    31
+*.cab   31
+*.wim   31
+*.swm   31
+*.dwm   31
+*.esd   31
+*.a     31
+*.ar    31
+*.dmg   31
+*.iso   31
+*.par   31
+*.tc    31
 
 # image formats (dircolors defaults)
-*.jpg   01;35
-*.jpeg  01;35
-*.mjpg  01;35
-*.mjpeg 01;35
-*.gif   01;35
-*.bmp   01;35
-*.pbm   01;35
-*.pgm   01;35
-*.ppm   01;35
-*.tga   01;35
-*.xbm   01;35
-*.xpm   01;35
-*.tif   01;35
-*.tiff  01;35
-*.png   01;35
-*.svg   01;35
-*.svgz  01;35
-*.mng   01;35
-*.pcx   01;35
-*.mov   01;35
-*.mpg   01;35
-*.mpeg  01;35
-*.m2v   01;35
-*.mkv   01;35
-*.webm  01;35
-*.ogm   01;35
-*.mp4   01;35
-*.m4v   01;35
-*.mp4v  01;35
-*.vob   01;35
-*.qt    01;35
-*.nuv   01;35
-*.wmv   01;35
-*.asf   01;35
-*.rm    01;35
-*.rmvb  01;35
-*.flc   01;35
-*.avi   01;35
-*.fli   01;35
-*.flv   01;35
-*.gl    01;35
-*.dl    01;35
-*.xcf   01;35
-*.xwd   01;35
-*.yuv   01;35
-*.cgm   01;35
-*.emf   01;35
-*.ogv   01;35
-*.ogx   01;35
+*.jpg   35
+*.jpeg  35
+*.mjpg  35
+*.mjpeg 35
+*.gif   35
+*.bmp   35
+*.pbm   35
+*.pgm   35
+*.ppm   35
+*.tga   35
+*.xbm   35
+*.tif   35
+*.tiff  35
+*.png   35
+*.svg   35
+*.svgz  35
+*.mng   35
+*.pcx   35
+*.jfif  35
+*.arw   35
+*.cbr   35
+*.cbz   35
+*.cr2   35
+*.dvi   35
+*.eps   35
+*.heif  35
+*.ico   35
+*.nef   35
+*.orf   35
+*.pnm   35
+*.ps    35
+*.raw   35
+*.stl   35
+*.webp  35
+*.xcf   35
+*.psd   35
+
+# video formats
+*.mov   95
+*.mpg   95
+*.mpeg  95
+*.m2v   95
+*.mkv   95
+*.webm  95
+*.ogm   95
+*.mp4   95
+*.m4v   95
+*.mp4v  95
+*.vob   95
+*.qt    95
+*.nuv   95
+*.wmv   95
+*.asf   95
+*.rm    95
+*.rmvb  95
+*.flc   95
+*.avi   95
+*.fli   95
+*.flv   95
+*.gl    95
+*.dl    95
+*.xwd   95
+*.yuv   95
+*.cgm   95
+*.emf   95
+*.ogv   95
+*.ogx   95
+*.heic  95
+*.m2ts  95
+*.xpm   95
 
 # audio formats (dircolors defaults)
-*.aac   00;36
-*.au    00;36
-*.flac  00;36
-*.m4a   00;36
-*.mid   00;36
-*.midi  00;36
-*.mka   00;36
-*.mp3   00;36
-*.mpc   00;36
-*.ogg   00;36
-*.ra    00;36
-*.wav   00;36
-*.oga   00;36
-*.opus  00;36
-*.spx   00;36
-*.xspf  00;36
+*.aac   32
+*.au    32
+*.flac  32
+*.m4a   32
+*.mid   32
+*.midi  32
+*.mka   32
+*.mp3   32
+*.mpc   32
+*.ogg   32
+*.ra    32
+*.wav   32
+*.oga   32
+*.opus  32
+*.spx   32
+*.xspf  32
+*.alac  32
+*.ape   32
+*.wma   32
+
+# document formats
+*.djvu  34
+*.doc   34
+*.docx  34
+*.dvi   34
+*.eml   34
+*.eps   34
+*.fotd  34
+*.key   34
+*.odp   34
+*.odt   34
+*.pdf   34
+*.ppt   34
+*.pptx  34
+*.rtf   34
+*.xls   34
+*.xlsx  34
+
+# cryptography formats
+*.asc         36
+*.enc         36
+*.gpg         36
+*.p12         36
+*.pfx         36
+*.pgp         36
+*.sig         36
+*.signature   36
+
+# immediate formats
+*build.gradle     33
+*Cargo.toml       33
+*CMakeLists.txt   33
+*Dockerfile       33
+*Justfile         33
+*Makefile         33
+*Rakefile         33
+*SConstruct       33
+
+# temp formats
+*.bak   02;37
+*.bk    02;37
+*.swn   02;37
+*.swo   02;37
+*.swp   02;37
+*.tmp   02;37
+*.~     02;37
+

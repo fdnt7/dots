@@ -16,13 +16,13 @@
 		"custom/arrow13",
 		"tray",
 		"custom/arrow10",
-		//"custom/pyctl#shuffle",
+		"custom/pyctl#shuffle",
 		//"custom/pyctl#voldown",
 		"custom/pyctl#previous",
 		"custom/pyctl#playpause",
 		"custom/pyctl#next",
 		//"custom/pyctl#volup",
-		//"custom/pyctl#repeat",
+		"custom/pyctl#repeat",
 		"custom/arrow14",
 		"custom/pyctltitle",
 		"custom/arrow11"
@@ -100,8 +100,8 @@
 		"capslock": true,
 		//"scrolllock": true,
 		"format": {
-			"numlock": "{icon}",
-			"capslock": "{icon} "
+			"numlock": "{icon}",
+			"capslock": "󰌎{icon} "
 			//"scrolllock": "ﲐ{icon} "
 		},
 		"format-icons": {
@@ -112,7 +112,7 @@
 
 	"clock#time": {
 		"interval": 60,
-		"format": "♥ {:%H:%M}",
+		"format": "󰣐 {:%H:%M}",
 		"tooltip": true
 	},
 
@@ -156,7 +156,7 @@
 		"interval": 2,
 		//"format-wifi": " {essid} ({signalStrength}%)",
 		"format-ethernet": " {bandwidthDownBytes} ↓↑ {bandwidthUpBytes}",
-		"format-disconnected": " ",
+		"format-disconnected": "󰈂 ",
 		"format-alt": " {ipaddr}/{cidr}",
 		"tooltip": false
 	},
@@ -181,16 +181,16 @@
 		"format": "{icon}",
 		"sort-by-number": true,
 		"format-icons": {
-			"1": " ",
+			"1": "󰋜 ",
 			"2": " ",
 			"3": " ",
-			"4": " ",
+			"4": " ",
 			"5": " ",
 			"6": " ",
-			"7": " ",
+			"7": "󰲂 ",
 			"8": " ",
-			"9": " ",
-			"10": " "
+			"9": "󰇯 ",
+			"10": " "
 		}
 	},
 
@@ -252,28 +252,28 @@
 	//		"format": " {}%"
 	//	},
 	"custom/pyctltitle": {
-		"exec": "playerctl metadata --format ' {{ title }} • {{ artist }}' | sed 's/&/🙲/p'",
+		"exec": "playerctl metadata --format '󰲸 {{ title }} • {{ artist }}' | sed 's/&/🙲/p'",
 		"interval": 1,
 		"max-length": 48,
 		"tooltip": false
 	},
 
 	"custom/pyctl#shuffle": {
-		"exec": "playerctl shuffle | sed -nre 's/^On$/列/p; s/^Off$/劣/p'",
+		"exec": "playerctl shuffle | sed -nre 's/^On$/󰒝/p; s/^Off$/󰒞/p'",
 		"on-click": "playerctl shuffle toggle",
 		"interval": 1,
 		"tooltip": false
 	},
 
 	"custom/pyctl#repeat": {
-		"exec": "playerctl loop | sed -nre 's/^Track$/綾/p; s/^Playlist$/凌/p; s/^None$/稜/p'",
+		"exec": "playerctl loop | sed -nre 's/^Track$/󰑘/p; s/^Playlist$/󰑖/p; s/^None$/󰑗/p'",
 		"on-click": "playerctl loop $(playerctl loop | sed -nre 's/^Playlist$/Track/p; s/^Track$/None/p; s/^None$/Playlist/p')",
 		"interval": 1,
 		"tooltip": false
 	},
 
 	"custom/pyctl#playpause": {
-		"exec": "playerctl status | sed -nre 's/^Playing$//p; s/^Paused$/契/p'",
+		"exec": "playerctl status | sed -nre 's/^Playing$/󰏤/p; s/^Paused$/󰐊/p'",
 		"on-click": "playerctl play-pause",
 		"on-scroll-up": "vol-ops +",
 		"on-scroll-down": "vol-ops -",
@@ -296,14 +296,14 @@
 	},
 
 	"custom/pyctl#previous": {
-		"format": "玲",
+		"format": "󰒮",
 		"on-click": "playerctl previous",
 		"interval": 1,
 		"tooltip": false
 	},
 
 	"custom/pyctl#next": {
-		"format": "怜",
+		"format": "󰒭",
 		"on-click": "playerctl next",
 		"interval": 1,
 		"tooltip": false
@@ -319,14 +319,14 @@
 		"tooltip": false,
 		"format": "{icon}  {} ",
 		"format-icons": {
-			"notification": "<span foreground='#FF78A7'><sup></sup></span>",
-			"none": "",
-			"dnd-notification": "<span foreground='#FF78A7'><sup></sup></span>",
-			"dnd-none": "",
-			"inhibited-notification": "<span foreground='#FF78A7'><sup></sup></span>",
-			"inhibited-none": "",
-			"dnd-inhibited-notification": "<span foreground='#FF78A7'><sup></sup></span>",
-			"dnd-inhibited-none": ""
+			"notification": "<span foreground='#FF78A7'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='#FF78A7'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='#FF78A7'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='#FF78A7'><sup></sup></span>",
+			"dnd-inhibited-none": ""
 		},
 		"return-type": "json",
 		"exec-if": "which swaync-client",

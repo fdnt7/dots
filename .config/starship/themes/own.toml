@@ -100,8 +100,8 @@ truncate_to_repo = true
 
 [c]
 symbol = " "
-style = "bg:green"
-format = '[ [$symbol]($style fg:green dimmed) ($version(-$name)) ]($style fg:black)'
+style = "bg:bright-green"
+format = '[ [$symbol]($style fg:bright-green) ($version(-$name)) ]($style fg:black)'
 
 [docker_context]
 symbol = " "
@@ -115,7 +115,7 @@ style = "bg:cyan fg:black bold"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:cyan fg:cyan dimmed"
+style = "bg:cyan fg:bright-black"
 format = '[($all_status$ahead_behind )]($style)'
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
@@ -135,7 +135,7 @@ format = '[ $symbol ($version) ]($style)'
 [golang]
 symbol = " "
 style = "bg:green"
-format = '[ [$symbol]($style fg:cyan dimmed) ($version) ]($style fg:black)'
+format = '[ [$symbol]($style fg:cyan) ($version) ]($style fg:black)'
 
 [haskell]
 symbol = " "
@@ -145,7 +145,7 @@ format = '[ $symbol ($version) ]($style)'
 [java]
 symbol = " "
 style = "bg:green bold"
-format = '[ [$symbol]($style fg:red dimmed) ($version) ]($style fg:black)'
+format = '[ [$symbol]($style fg:red) ($version) ]($style fg:black)'
 
 [julia]
 symbol = " "
@@ -155,7 +155,7 @@ format = '[ $symbol ($version) ]($style)'
 [nodejs]
 symbol = " "
 style = "bg:green"
-format = '[ [$symbol]($style fg:green dimmed) ($version) ]($style fg:black)'
+format = '[ [$symbol]($style fg:green) ($version) ]($style fg:black)'
 
 [nim]
 symbol = " "
@@ -163,14 +163,14 @@ style = "bg:green fg:black"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
-symbol = " "
+symbol = " "
 style = "bg:green"
-format = '[ [$symbol]($style fg:red dimmed) ($version) ]($style fg:black)'
+format = '[ [$symbol]($style fg:red) ($version) ]($style fg:black)'
 
 [python]
 symbol = " "
 style = "bg:green"
-format = '[ [$symbol]($style fg:yellow dimmed) ($version) (行 $virtualenv )]($style fg:black)'
+format = '[ [$symbol]($style fg:yellow) ($version) (行 $virtualenv )]($style fg:black)'
 
 [time]
 disabled = true
@@ -191,7 +191,7 @@ format = "[ $symbol ($version) ]($style)"
 
 
 [sudo]
-style = "bold dimmed fg:black bg:red"
+style = "bold fg:bright-black bg:red"
 symbol = " "
 format = "[ $symbol ]($style)"
 disabled = false

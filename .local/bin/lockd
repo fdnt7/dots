@@ -1,9 +1,9 @@
 #!/bin/bash
 
 swayidle -dw \
-	timeout 600 'dim 0.25' \
+	timeout 300 'dim 0.25' \
 		resume 'pkill gammastep' \
-	timeout 900 'pkill gammastep; lock' \
+	timeout 600 'pkill gammastep; lock' \
 	timeout 1200 'dim 0.1' \
 		resume 'pkill gammastep' \
 	timeout 1800 'sleep 1 && hyprctl dispatch dpms off' \

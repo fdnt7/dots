@@ -7,6 +7,8 @@ set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
+map . set hidden!
+
 # interpreter for shell commands
 set shell sh
 

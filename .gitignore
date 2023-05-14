@@ -5,3 +5,4 @@
 .config/btop/btop.log
 .config/kitty/theme.conf
 .config/nushell/history.txt
+.config/waybar/style.css

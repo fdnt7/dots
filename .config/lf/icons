@@ -22,16 +22,16 @@
 # file types (with matching order)
 ln             # LINK
 or             # ORPHAN
-tw             # STICKY_OTHER_WRITABLE
+tw      󱍤       # STICKY_OTHER_WRITABLE
 ow             # OTHER_WRITABLE
-st      𢡊      # STICKY
+st      󱍫       # STICKY
 di             # DIR
 pi      󰟥       # FIFO
 so             # SOCK
 bd             # BLK
-cd      c       # CHR
-su      u       # SETUID
-sg      g       # SETGID
+cd      󱇰       # CHR
+su             # SETUID
+sg             # SETGID
 ex             # EXEC
 fi      󰈔       # FILE
 
@@ -68,9 +68,9 @@ fi      󰈔       # FILE
 *.hbs           
 *.conf          
 *.ini           
-*.yml           
-*.yaml          
-*.toml          
+*.yml           
+*.yaml          
+*.toml          󰬛
 *.bat           
 *.mk            
 *.jpg           
@@ -130,8 +130,8 @@ fi      󰈔       # FILE
 *.fsx           
 *.fs            
 *.fsi           
-*.rs            
-*.rlib          
+*.rs            
+*.rlib          
 *.d             
 *.erl           
 *.hrl           
@@ -169,7 +169,7 @@ fi      󰈔       # FILE
 *dropbox                
 *.ds_store              
 *.gitconfig             
-*.gitignore             
+*.gitignore             
 *.gitattributes         
 *.gitlab-ci.yml         
 *.bashrc                
@@ -186,8 +186,8 @@ fi      󰈔       # FILE
 *node_modules           
 *react.jsx              
 *procfile               
-*dockerfile             
-*docker-compose.yml     
+*dockerfile             
+*docker-compose.yml     
 *rakefile               
 *config.ru              
 *gemfile                
@@ -207,8 +207,8 @@ fi      󰈔       # FILE
 *LICENSE                
 *React.jsx              
 *Procfile               
-*Dockerfile             
-*Docker-compose.yml     
+*Dockerfile             
+*Docker-compose.yml     
 *Rakefile               
 *Gemfile                
 *Makefile               
@@ -386,9 +386,10 @@ Vagrantfile             
 # cryptography formats
 *.asc         
 *.enc         
+*.pfx         
 *.gpg         󰌆
 *.p12         󰌆
-*.pfx         
+*.key         󰌆
 *.pgp         󰌆
 *.sig         󰷻
 *.signature   󰷻
@@ -401,7 +402,7 @@ Vagrantfile             
 *.eml   󰇮
 *.eps   󰕙
 #*.fotd  
-*.key   󰐨
+#*.key   󰐨
 *.odp   󰐨
 *.odt   󰈙
 *.pdf   
@@ -412,98 +413,105 @@ Vagrantfile             
 *.xlsx  󰈛
 
 # temp formats
-*.bak   󰁯
-*.bk    󰁯
-*.swn   󰁯
-*.swo   󰁯
-*.swp   󰁯
-*.tmp   󰁯
-*.~     󰁯
+*~            󰁯
+#*#            󰁯
+*.bak         󰁯
+*.old         󰁯
+*.orig        󰁯
+*.part        󰁯
+*.rej         󰁯
+*.swp         󰁯
+*.tmp         󰁯
+*.dpkg-dist   󰁯
+*.dpkg-old    󰁯
+*.ucf-dist    󰁯
+*.ucf-old     󰁯
+*.rpmnew      󰁯
+*.rpmorig     󰁯
+*.rpmsave     󰁯
+*.swn         󰁯
+*.swo         󰁯
+*.bk          󰁯
+*.~           󰁯
 
 # other formats
-*.txt         󰎞
-*.log         󰯂
-*.directory   󱧼
-*.exe         
-*.msi         
-*.dll         
+*.txt           󰎞
+*.log           󰯂
+*.directory     󱧼
+*.exe           
+*.msi           
+*.dll           
+*.env           
+*Cargo.toml     󱣘
+*Cargo.lock     󱣘
+*.dockerignore  󰡨
+*.rc            
+*.conf          
+*.lock          
 
 ## custom directory names
-/bin            
-/sbin           
-/usr/bin        
-/usr/sbin       
-/usr/local/bin  
-~/.local/bin    
+bin/            
+sbin/           
 
-/boot   
-/dev    
-/etc    
-/home   
+boot/   
+dev/    
+etc/    󰯠
+home/   
 
-/usr/local  
-~/.local    
+local/    󰟙
+~/.local  󰟙
 
-/usr/share        
-/usr/local/share  
-~/.local/share    
+share/  󱔔
 
-/lib            
-/lib64          
-/usr/lib        
-/usr/lib32      
-/usr/lib64      
-/usr/local/lib  
-~/.local/lib    
+lib/    
+lib32/  
+lib64/  
 
-/usr/include        󱀯
-/usr/local/include  󱀯
-~/.local/include    󱀯
+include/        󱀯
+icons/          
+state/          
+applications/   
 
-/usr/share/icons        
-/usr/local/share/icons  
-~/.local/share/icons    
+mnt/    
+opt/    󰶮
+proc/   
+root/   󱇐
+run/    󰑮
+srv/    
+sys/    
 
-~/.local/state  
+tmp/    󰅒
+.tmp/   󰅒
 
-/usr/share/applications         
-/usr/local/share/applications   
-~/.local/share/applications     
+usr/    󰭕
 
-/mnt    
-/opt    󰶮
-/proc   
-/root   
-/run    󰑮
-/srv    
-/sys    
-
-/tmp                󰅒
-~/Downloads/.tmp    󰅒
-
-/usr    󰭕
-
-/var    
+var/    
 ~/.var  
 
-/mnt/hdd      
+man/    󱗖
+src/    
+games/  󰺷
+
+hdd/       
+assets/   
+.git/     
+.github/  
+db/       󱘲
+scripts/  
+conf/     󰢻
+target/   󱇕
 
 ~   
 
-~/Applications          󱍕
-~/Documents             󱔘
-/mnt/hdd/Documents      󱔘
-~/Downloads             
-/mnt/hdd/Downloads      
-~/Music                 󰼄
-/mnt/hdd/Music          󰼄
-~/Pictures              
-/mnt/hdd/Pictures       
-~/Videos                
-/mnt/hdd/Videos         
-~/Repos                 󰐶
+Applications/   󱍕
+Documents/      󱔘
+Downloads/      
+Music/          󰼄
+Pictures/       
+Videos/         
+Repos/          󰐶
 
-~/.vscode               󰨞
+.vscode/                󰨞
 ~/.zoom                 
 ~/.steam                
 ~/.ssh                  
@@ -511,7 +519,7 @@ Vagrantfile             
 ~/.muse-hub             󰙽
 ~/.mozilla              
 ~/.fltk                 󰦭
-~/.dbus                 
+~/.dbus                 󰌘
 ~/.stellarium           
 ~/.nuget                󰌛
 ~/.dotnet               󰪮
@@ -522,17 +530,12 @@ Vagrantfile             
 ~/.config               
 ~/.cache                󰃨
 
-~/Documents/.priv   
-~/Downloads/.priv   
-~/Pictures/.priv    
-~/Videos/.priv      
-
-~/Pictures/.hid     
-
-~/Pictures/.nsfw  
-~/Videos/.nsfw    
-
-~/Pictures/.old   
+.priv/    
+.hid/     
+.nsfw/    
+.old/     
+.dup/     
+.trash/   
 
 ~/Pictures/Backgrounds    󰸉
 /usr/share/backgrounds    󰸉

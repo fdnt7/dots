@@ -80,7 +80,7 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.33);
 	color: @white;
 	font-family: JetBrainsMono Nerd Font, Siji;
 	font-size: 9pt;

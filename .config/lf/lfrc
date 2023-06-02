@@ -8,6 +8,7 @@ set cleaner ctpvclear
 &ctpvquit $id
 
 map . set hidden!
+set cursorpreviewfmt "\033[7m"
 
 # interpreter for shell commands
 set shell sh

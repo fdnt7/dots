@@ -44,7 +44,7 @@ waybar &
 # Autostart Applications
 #mailspring &
 #/opt/bitwarden/bitwarden &
-vktablet &
+otd &
 
 # Set Background
 swww init && swww img "$BACKGROUND" -t grow --transition-step 255 --transition-duration 1.333 --transition-fps 60 &

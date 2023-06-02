@@ -100,7 +100,7 @@ truncate_to_repo = true
 
 [c]
 symbol = " "
-style = "bg:bright-green"
+style = "bg:green"
 format = '[ [$symbol]($style fg:bright-green) ($version(-$name)) ]($style fg:black)'
 
 [docker_context]
@@ -192,7 +192,7 @@ format = "[ $symbol ($version) ]($style)"
 
 [sudo]
 style = "bold fg:bright-black bg:red"
-symbol = " "
+symbol = "󰌆"
 format = "[ $symbol ]($style)"
 disabled = false
 

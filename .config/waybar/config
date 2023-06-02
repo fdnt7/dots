@@ -100,7 +100,7 @@
 		"capslock": true,
 		//"scrolllock": true,
 		"format": {
-			"numlock": "{icon}",
+			"numlock": "{icon}",
 			"capslock": "󰌎{icon} "
 			//"scrolllock": "ﲐ{icon} "
 		},

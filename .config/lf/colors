@@ -148,6 +148,7 @@ fi      00          # FILE
 *.webp  35
 *.xcf   35
 *.psd   35
+*.xpm   35
 
 # video formats
 *.mov   95  
@@ -181,7 +182,6 @@ fi      00          # FILE
 *.ogx   95
 *.heic  95
 *.m2ts  95
-*.xpm   95
 
 # audio formats (dircolors defaults)
 *.aac   36

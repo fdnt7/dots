@@ -453,7 +453,7 @@ bin/            
 sbin/           
 
 boot/   
-dev/    
+dev/    󰋊
 etc/    󰯠
 home/   
 
@@ -467,8 +467,8 @@ lib32/  
 lib64/  
 
 include/        󱀯
-icons/          
-state/          
+icons/          󰇲
+state/          󰋚
 applications/   
 
 mnt/    
@@ -500,21 +500,25 @@ scripts/  
 conf/     󰢻
 target/   󱇕
 
+lost+found/   󱏡
+
 ~   
 
 Applications/   󱍕
 Documents/      󱔘
 Downloads/      
 Music/          󰼄
-Pictures/       
+Pictures/       󰋯
 Videos/         
 Repos/          󰐶
 
 .vscode/                󰨞
+.vscode-server/         󰨞
+
 ~/.zoom                 
 ~/.steam                
 ~/.ssh                  
-~/.pki                  
+~/.pki                  󱆈
 ~/.muse-hub             󰙽
 ~/.mozilla              
 ~/.fltk                 󰦭
@@ -525,6 +529,7 @@ Repos/          󰐶
 ~/.hyprland             󰸊
 ~/.java                 
 ~/.thextech-smbx        󰟠
+~/.wakatime             󱦟
 
 ~/.config               
 ~/.cache                󰃨
@@ -533,7 +538,7 @@ Repos/          󰐶
 .hid/     
 .nsfw/    
 .old/     
-.dup/     
+.dup/     󰆑
 .trash/   
 
 ~/Pictures/Backgrounds    󰸉

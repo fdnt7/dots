@@ -8,6 +8,7 @@ SETUVAR --export GNUPGHOME:/home/fdnt/\x2elocal/share/gnupg
 SETUVAR --export --path GOPATH:/home/fdnt/\x2elocal/share/go
 SETUVAR --export GTK2_RC_FILES:/home/fdnt/\x2econfig/gtk\x2d2\x2e0/gtkrc
 SETUVAR --export HISTFILE:/home/fdnt/\x2elocal/state/bash/history
+SETUVAR --export IPYTHONDIR:/home/fdnt/\x2econfig/ipython
 SETUVAR --export NODE_REPL_HISTORY:/home/fdnt/\x2elocal/share/node_repl_history
 SETUVAR --export NPM_CONFIG_USERCONFIG:/home/fdnt/\x2econfig/npm/npmrc
 SETUVAR --export NUGET_PACKAGES:/home/fdnt/\x2ecache/NuGetPackages

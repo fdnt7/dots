@@ -53,7 +53,7 @@ disabled = true
 fish_indicator = "⋊>"
 zsh_indicator = "%_"
 xonsh_indicator = "@>"
-bash_indicator = "_"
+bash_indicator = "_"
 nu_indicator = "/>"
 powershell_indicator = ">_"
 style = "bold fg:bright-black bg:white"
@@ -82,11 +82,11 @@ truncate_to_repo = true
 "Documents" = " "
 "Downloads" = " "
 "Music" = "󰼄 "
-"Pictures" = " "
+"Pictures" = "󰋯 "
 "Videos" = " "
 "Repos" = "󰐶 "
 
-".dup" = " "
+".dup" = "󰆑 "
 ".priv" = " "
 ".hid" = " "
 ".nsfw" = " "
@@ -153,12 +153,12 @@ style = "bg:green fg:black"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
-symbol = " "
+symbol = "󰎙 "
 style = "bg:green"
 format = '[ [$symbol]($style fg:green) ($version) ]($style fg:black)'
 
 [nim]
-symbol = " "
+symbol = " "
 style = "bg:green fg:black"
 format = '[ $symbol ($version) ]($style)'
 
@@ -168,7 +168,7 @@ style = "bg:green"
 format = '[ [$symbol]($style fg:red) ($version) ]($style fg:black)'
 
 [python]
-symbol = " "
+symbol = "󰌠 "
 style = "bg:green"
 format = '[ [$symbol]($style fg:yellow) ($version) (行 $virtualenv )]($style fg:black)'
 
@@ -185,7 +185,7 @@ format = "[ ⧗ $duration ]($style)"
 disabled = false
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 style = "bg:yellow fg:black"
 format = "[ $symbol ($version) ]($style)"
 

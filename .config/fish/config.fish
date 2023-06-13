@@ -9,6 +9,10 @@ alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
 alias black="black -S"
 alias man="batman"
+alias vim="nvim"
+alias evcxr="irust"
+alias python="ipython"
+alias psql="pgcli"
 
 alias ct="column -t"
 alias df="df -hPT"
@@ -49,9 +53,8 @@ abbr nf 'neofetch'
 abbr ff 'fastfetch'
 abbr hf 'hyfetch'
 abbr py 'python'
-abbr ipy 'ipython'
 abbr rs 'evcxr'
-abbr irs 'irust'
+abbr pg 'psql'
 abbr swi 'swww img'
 abbr ht 'htop'
 abbr bt 'btop'
@@ -101,32 +104,34 @@ abbr rr "paru -Rcns"
 abbr R "paru -Rcns"
 
 ## Neovim
-abbr v "nvim"
+abbr v "vim"
 abbr V "sudoedit"
 abbr vv "sudoedit"
 
-abbr vb --set-cursor "nvim $HOME/.local/bin/%"
+abbr vb --set-cursor "vim $HOME/.local/bin/%"
 
-abbr vc --set-cursor "nvim $XDG_CONFIG_HOME/%"
-abbr vcv "nvim $XDG_CONFIG_HOME/nvim/lua/user/init.lua"
-abbr vcf "nvim $XDG_CONFIG_HOME/fish/config.fish"
-abbr vcz "nvim $XDG_CONFIG_HOME/zsh/.zshrc"
-abbr vca "nvim $XDG_CONFIG_HOME/alacritty/..alacritty.yml && colorsubst"
-abbr vck "nvim $XDG_CONFIG_HOME/kitty/kitty.conf"
-abbr vckt "nvim $XDG_CONFIG_HOME/kitty/..theme.conf && colorsubst"
-abbr vch "nvim $XDG_CONFIG_HOME/hypr/hyprland.conf"
-abbr vchb "nvim $XDG_CONFIG_HOME/hypr/conf/binds.conf"
-abbr vchr "nvim $XDG_CONFIG_HOME/hypr/conf/rules.conf"
-abbr vchc "nvim $XDG_CONFIG_HOME/hypr/conf/chords.conf"
-abbr vcw "nvim $XDG_CONFIG_HOME/waybar/config && restart-waybar"
-abbr vcws "nvim $XDG_CONFIG_HOME/waybar/..style.css && colorsubst"
-abbr vcl "nvim $XDG_CONFIG_HOME/lf/lfrc"
-abbr vclc "nvim $XDG_CONFIG_HOME/lf/colors"
-abbr vcli "nvim $XDG_CONFIG_HOME/lf/icons"
-abbr vcs "nvim $XDG_CONFIG_HOME/starship.toml"
+abbr vc --set-cursor "vim $XDG_CONFIG_HOME/%"
+abbr vcv "vim $XDG_CONFIG_HOME/nvim/lua/user/init.lua"
+abbr vcf "vim $XDG_CONFIG_HOME/fish/config.fish"
+abbr vcz "vim $XDG_CONFIG_HOME/zsh/.zshrc"
+abbr vca "vim $XDG_CONFIG_HOME/alacritty/..alacritty.yml && colorsubst"
+abbr vck "vim $XDG_CONFIG_HOME/kitty/kitty.conf"
+abbr vckt "vim $XDG_CONFIG_HOME/kitty/..theme.conf && colorsubst"
+abbr vch "vim $XDG_CONFIG_HOME/hypr/hyprland.conf"
+abbr vchb "vim $XDG_CONFIG_HOME/hypr/conf/binds.conf"
+abbr vchr "vim $XDG_CONFIG_HOME/hypr/conf/rules.conf"
+abbr vchc "vim $XDG_CONFIG_HOME/hypr/conf/chords.conf"
+abbr vcw "vim $XDG_CONFIG_HOME/waybar/config && restart-waybar"
+abbr vcws "vim $XDG_CONFIG_HOME/waybar/..style.css && colorsubst"
+abbr vcl "vim $XDG_CONFIG_HOME/lf/lfrc"
+abbr vclc "vim $XDG_CONFIG_HOME/lf/colors"
+abbr vcli "vim $XDG_CONFIG_HOME/lf/icons"
+abbr vcs "vim $XDG_CONFIG_HOME/starship.toml"
+abbr vcff "vim $XDG_CONFIG_HOME/fastfetch/config.conf"
+abbr vchf "vim $XDG_CONFIG_HOME/hyfetch.json"
 
-abbr vA "nvim $HOME/.local/bin/autostart"
-abbr vC "nvim $XDG_DATA_HOME/colors.env && colorsubst"
+abbr vA "vim $HOME/.local/bin/autostart"
+abbr vC "vim $XDG_DATA_HOME/colors.env && colorsubst"
 abbr vS "sudoedit /etc/sudoers"
 
 ## Misc
@@ -135,12 +140,12 @@ abbr :wq 'exit'
 
 ## -- Environment Variables
 
-export SUDO_PROMPT=" "
+export SUDO_PROMPT="󰌆 "
 export EDITOR="nvim"
 
 ## -- Sources
 
-source /usr/share/doc/find-the-command/ftc.fish
+#source /usr/share/doc/find-the-command/ftc.fish
 zoxide init fish | source
 eval (batpipe)
 
@@ -203,7 +208,8 @@ set fish_greeting
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    pokemon-colorscripts -r --no-title
+    #pokemon-colorscripts -r --no-title
+    pfetch
 end
 
 ## Prompt
